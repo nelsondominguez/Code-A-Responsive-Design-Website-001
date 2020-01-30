@@ -183,17 +183,19 @@ footer a{
 
 
 /* MEDIA QUERIES */
-
-/* css rules target screens with max widih of 700px */
-@media screen and (max-width: 700px){
+/*tablets*/
+/* css rules target screens with max widih of 768px */
+/* fluid layouts are relative for many screen sizes */
+@media screen and (max-width: 768px){
 
 #featured li{
     width: 46%;
 }
 }
-
-/* css rules target screens with max widih of 400px */
-@media screen and (max-width: 400px){
+/*mobiles*/
+/* css rules target screens with max widih of 480px */
+/* percentage are not absoulte or static measurments */
+@media screen and (max-width: 480px){
 
 #featured li{
     width: 92%;
