@@ -188,9 +188,40 @@ footer a{
 /* fluid layouts are relative for many screen sizes */
 @media screen and (max-width: 768px){
 
+/* new navagation line */
+  header nav{
+          float: none;
+          clear: left;
+          width: 100%;
+      }
+
+/* get rid of space between logo */
+      header nav ul{
+         margin: 0;
+         padding: 0;
+     }
+/* bring logo to the center, take out some of margin */
+     h1.logo{
+          margin: 10px auto 0px;
+          float: none;
+      }
+/* center each selection on the line */
+      header nav ul li{
+          margin: 10px 0;
+          width: 20%;
+          padding: 0;
+          text-align: center;
+      }
+/* increase width */
 #featured li{
-    width: 46%;
+    width: 48%;
 }
+/* center footer and create two columns */
+footer ul{
+        width: 48%;
+        text-align: center;
+    }
+
 }
 /*mobiles*/
 /* css rules target screens with max widih of 480px */
@@ -200,4 +231,5 @@ footer a{
 #featured li{
     width: 92%;
 }
+
 }
