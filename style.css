@@ -228,6 +228,49 @@ footer a{
 /* percentage are not absoulte or static measurments */
 @media screen and (max-width: 480px){
 
+
+/* ajusting menu for burger icon  */
+  .burger-nav{
+      display: block;
+      height: 40px;
+      width: 110%;
+      background: url(images/burger.png) no-repeat 98% center;
+      background-color: #404040;
+      cursor: pointer;
+
+  }
+
+   header .wrapper{
+        width: 100%;
+        padding: 0;
+    }
+
+    header nav ul{
+        overflow: hidden;
+        background: #505050
+        height: 0;
+    }
+
+    header nav ul.open{
+        height: auto;
+    }
+
+/* ajusting nav links on menu */
+    header nav ul li{
+        float: none;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+    }
+
+    header nav ul li a{
+        color: #fff;
+        padding: 10px;
+        border-bottom: 1px solid #404040;
+        display: block;
+        margin: 0;
+    }
+
 /* adjust footer to fit on moblie  */
       #featured li{
           width: 90%;
