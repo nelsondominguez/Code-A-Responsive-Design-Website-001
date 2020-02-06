@@ -217,7 +217,7 @@ footer a{
     width: 48%;
 }
 /* center footer and create two columns */
-footer ul{
+    footer ul{
         width: 48%;
         text-align: center;
     }
@@ -228,8 +228,30 @@ footer ul{
 /* percentage are not absoulte or static measurments */
 @media screen and (max-width: 480px){
 
-#featured li{
-    width: 92%;
-}
+/* adjust footer to fit on moblie  */
+      #featured li{
+          width: 90%;
+          margin: 20px 5%;
+        }
+
+        /* centers footer  */
+      footer ul{
+        width: 98%;
+        text-align: center;
+      }
+
+        /* makes the home menu fit on moblie devices */
+    #home-menu li{
+           float: none;
+           width: 96%;
+           margin: 30px 2% !important;
+         }
+
+         /* centers banner */
+       #main-banner img{
+        position: relative;
+        width: 180%;
+        left: -40%;
+      }
 
 }
