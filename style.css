@@ -182,119 +182,133 @@ footer a{
 }
 
 
-/* MEDIA QUERIES */
-/*tablets*/
-/* css rules target screens with max widih of 768px */
-/* fluid layouts are relative for many screen sizes */
+
+
+/* MEDIA Queries */
+
+/*002.009 This line makes it so when the pictures with #featured
+     li get break pointed at 768px width (Fluid layout)*/
+
+/*Tablets*/
 @media screen and (max-width: 768px){
 
-/* new navagation line */
+  /*002.011 This changes the header of the website so
+          it floats away from the right side*/
   header nav{
-          float: none;
-          clear: left;
-          width: 100%;
-      }
-
-/* get rid of space between logo */
-      header nav ul{
-         margin: 0;
-         padding: 0;
-     }
-/* bring logo to the center, take out some of margin */
-     h1.logo{
-          margin: 10px auto 0px;
-          float: none;
-      }
-/* center each selection on the line */
-      header nav ul li{
-          margin: 10px 0;
-          width: 20%;
-          padding: 0;
-          text-align: center;
-      }
-/* increase width */
-#featured li{
-    width: 48%;
-}
-/* center footer and create two columns */
-    footer ul{
-        width: 48%;
-        text-align: center;
-    }
-
-}
-/*mobiles*/
-/* css rules target screens with max widih of 480px */
-/* percentage are not absoulte or static measurments */
-@media screen and (max-width: 480px){
-
-
-/* ajusting menu for burger icon  */
-.burger-nav{
-  display: block;
-  height: 40px;
-  width:100%;
-  background:url(images/burger.png) no-repeat 98% center;
-  background-color: #404040;
-  cursor: pointer;
+      float: none;
+      clear: left;
+      width: 100%;
+  }
+  /*002.011 This gets rid of the margin and padding or space above
+        the main bbuttons and the main logo*/
+  header nav ul{
+      margin: 0;
+      padding: 0;
+  }
+  /*002.011 This takes away the margin of the main logo and centralizes it*/
+  h1.logo{
+      margin: 10px auto 0;
+      float: none;
+  }
+  /*002.011 Centralizes the li tags(main buttons %5) so that they fit
+        the browser easily*/
+  header nav ul li{
+      margin: 10px 0;
+      width: 20%;
+      padding: 0;
+      text-align: center;
+  }
+  /*002.011 you can see the images better with the width as a percent(%)*/
+  #featured li{
+      width: 48%
+  }
+  /*002.011 This bit of code centers the footer text so that it is more
+        readable*/
+  footer ul{
+      width: 48%;
+      text-align: center;
+  }
 
   }
 
-  header .wrapper{
+  /*002.009 This query code creates another breaking point at 480px
+       so the images pile up (Fluid layout) */
+
+    /*Mobiles*/
+  @media screen and (max-width: 480px){
+/*--002.015 only want the imadge to show once and appear centered with the background tag */
+ .burger-nav{
+    display: block;
+    height: 40px;
+    width:100%;
+    background:url(images/burger_icon.png) no-repeat 98% center;
+    background-color: #404040;
+    cursor: pointer;
+
+
+ }
+/*--002.015 gets rid of the padding around the burger_icon*/
+ header .wrapper{
      width:100%;
      padding:0;
-    }
-
-    header nav ul{
+ }
+ /*--002.015 this line controls the aperence of the
+               menu when the menu is closed*/
+ header nav ul{
     overflow:hidden;
     background: #505050;
     height: 0;
-    }
-
-    header nav ul.open{
+ }
+/*--002.015 giving the ul list a class of open.
+             when open it should display these styles.*/
+ header nav ul.open{
    height: auto;
-    }
+ }
+/*--002.015  positions the menu's with style
+             when the burger icon is pressed*/
+ header nav ul li{
+    float:none;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+ }
+/*--002.015 fills the menu's with style (coloring and background)*/
+ header nav ul li a{
+   color: #fff;
+   padding: 10px;
+   border-bottom: 1px solid #404040;
+   display: block;
+   margin: 0;
+ }
 
-/* ajusting nav links on menu */
-      header nav ul li{
-      float:none;
-      text-align: left;
-      width: 100%;
-      margin: 0;
-    }
+/*002.013 We used the featured li to adjust the
+   imadges to be vertacally aliegned*/
+  #featured li{
+      width: 90%;
+      margin:v20px 5%;
+  }
+  /*002.013 This line is to readjust the font for
+      readabilaty down in the footer texts*/
+footer ul{
+    width:98%;
+    text-align: center;
 
-    header nav ul li a{
-       color: #fff;
-       padding: 10px;
-       border-bottom: 1px solid #404040;
-       display: block;
-       margin: 0;
-    }
+  }
+/*002.013 This line makes the "The Menu" Line up for a readble mobile viewport */
+  #home-menu li{
+    float: none;/*002.013 This makes it so they arent attached to the left or the right*/
+    width: 96%; /*002.013 Makes it so the words are on one line*/
+    margin: 30px 2% !important; /*002.013  Spaces the menu sentences above and below*/
 
-/* adjust footer to fit on moblie  */
-      #featured li{
-          width: 90%;
-          margin: 20px 5%;
-        }
-
-        /* centers footer  */
-      footer ul{
-        width: 98%;
-        text-align: center;
-      }
-
-        /* makes the home menu fit on moblie devices */
-    #home-menu li{
-           float: none;
-           width: 96%;
-           margin: 30px 2% !important;
-         }
-
-         /* centers banner */
-       #main-banner img{
-        position: relative;
-        width: 180%;
-        left: -40%;
-      }
+  }
+/*002.013 We use this line to increase the size of
+    the main title banner(#main-banner). Width increases the total size of the banner
+    and the "left" cuts 40% of the banner on both sides.  */
+      /*002.017 We Removed the #main-banner code so the images fit more intuativlly
+      #main-banner img{
+            position: relative;
+            width: 180%;
+            left: -40%
+     }*/
 
 }
